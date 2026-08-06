@@ -1,0 +1,859 @@
+{
+  "name": "Test 1",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "My team",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Name"
+            },
+            {
+              "fieldLabel": "Looks"
+            },
+            {
+              "fieldLabel": "Profession",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Video Editor"
+                  },
+                  {
+                    "option": "Graphic Designer"
+                  },
+                  {
+                    "option": "AI Manager"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        0,
+        16
+      ],
+      "id": "782669e0-bb0f-4f07-b2f8-23583dc1e9bd",
+      "name": "On form submission",
+      "webhookId": "e9589250-ee01-4e72-85fe-3822bb19fbbe"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "appSwaM4KJeXoe3Ep",
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbld7IsWkG50Cs0cV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep/tbld7IsWkG50Cs0cV"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $('Update in Airtable').item.json.id }}",
+            "Rating": 5
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Looks",
+              "displayName": "Looks",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Profession",
+              "displayName": "Profession",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Video Editor",
+                  "value": "Video Editor"
+                },
+                {
+                  "name": "Graphic Designer",
+                  "value": "Graphic Designer"
+                },
+                {
+                  "name": "AI Manager",
+                  "value": "AI Manager"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Rating",
+              "displayName": "Rating",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        672,
+        -176
+      ],
+      "id": "2b7d3d5f-17b3-4480-b66b-522150ed5029",
+      "name": "Video Editor Rating",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "SaQhaqoVhOF6Jutd",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "appSwaM4KJeXoe3Ep",
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbld7IsWkG50Cs0cV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep/tbld7IsWkG50Cs0cV"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $('Update in Airtable').item.json.id }}",
+            "Rating": 3
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Looks",
+              "displayName": "Looks",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Profession",
+              "displayName": "Profession",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Video Editor",
+                  "value": "Video Editor"
+                },
+                {
+                  "name": "Graphic Designer",
+                  "value": "Graphic Designer"
+                },
+                {
+                  "name": "AI Manager",
+                  "value": "AI Manager"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Rating",
+              "displayName": "Rating",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        672,
+        16
+      ],
+      "id": "1096145e-d3d8-44db-ace6-aa0c4b1843e7",
+      "name": "Graphic Designer Rating",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "SaQhaqoVhOF6Jutd",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appSwaM4KJeXoe3Ep",
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbld7IsWkG50Cs0cV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep/tbld7IsWkG50Cs0cV"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.Name }}",
+            "Looks": "={{ $json.Looks }}",
+            "Profession": "={{ $json.Profession }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Looks",
+              "displayName": "Looks",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Profession",
+              "displayName": "Profession",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Video Editor",
+                  "value": "Video Editor"
+                },
+                {
+                  "name": "Graphic Designer",
+                  "value": "Graphic Designer"
+                },
+                {
+                  "name": "AI Manager",
+                  "value": "AI Manager"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        16
+      ],
+      "id": "f1efa910-a58e-482d-ba02-61591823005e",
+      "name": "Update in Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "SaQhaqoVhOF6Jutd",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.fields.Profession }}",
+                    "rightValue": "Video Editor",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "0bb97b9b-d91c-4488-9b9c-b2abab37753e"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "649e9bf8-ad26-4497-ab33-42c11f6bbf75",
+                    "leftValue": "={{ $json.fields.Profession }}",
+                    "rightValue": "Graphic Designer",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "c7805aaf-997f-4c33-9102-4e3a4169b0dc",
+                    "leftValue": "={{ $json.fields.Profession }}",
+                    "rightValue": "AI Manager",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        448,
+        0
+      ],
+      "id": "a395de0a-2fc4-4078-9b32-ad5dacfec967",
+      "name": "Pathways"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "appSwaM4KJeXoe3Ep",
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbld7IsWkG50Cs0cV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep/tbld7IsWkG50Cs0cV"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $('Update in Airtable').item.json.id }}",
+            "Rating": 1
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Looks",
+              "displayName": "Looks",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Profession",
+              "displayName": "Profession",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Video Editor",
+                  "value": "Video Editor"
+                },
+                {
+                  "name": "Graphic Designer",
+                  "value": "Graphic Designer"
+                },
+                {
+                  "name": "AI Manager",
+                  "value": "AI Manager"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Rating",
+              "displayName": "Rating",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        672,
+        208
+      ],
+      "id": "90dfaf7a-4e79-45dd-b7ca-8dd313b90513",
+      "name": "AI Manager Rating",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "SaQhaqoVhOF6Jutd",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=I want you to act like the best poem creator and create poem with the details given below , the poem should be only two lines and not bigger than that and it should be simple to understand.\n\n\nI want you to include this things into the poem :\nName: {{ $json.fields.Name }}\nLooks: {{ $json.fields.Looks }}\nProfession: {{ $json.fields.Profession }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        896,
+        16
+      ],
+      "id": "a4a7d653-b2ee-4458-adfa-fd23589d37f9",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        976,
+        256
+      ],
+      "id": "de5853c2-d585-4d08-9261-79bd275019b4",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Q2mtiuqUMqmeEall",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "appSwaM4KJeXoe3Ep",
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbld7IsWkG50Cs0cV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appSwaM4KJeXoe3Ep/tbld7IsWkG50Cs0cV"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Poem": "={{ $json.output }}",
+            "id": "={{ $('Update in Airtable').item.json.id }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Looks",
+              "displayName": "Looks",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Profession",
+              "displayName": "Profession",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Video Editor",
+                  "value": "Video Editor"
+                },
+                {
+                  "name": "Graphic Designer",
+                  "value": "Graphic Designer"
+                },
+                {
+                  "name": "AI Manager",
+                  "value": "AI Manager"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Rating",
+              "displayName": "Rating",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Poem",
+              "displayName": "Poem",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        1248,
+        16
+      ],
+      "id": "29a63ca1-bb0e-4000-8e1a-c695bab6633a",
+      "name": "Update record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "SaQhaqoVhOF6Jutd",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Update in Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update in Airtable": {
+      "main": [
+        [
+          {
+            "node": "Pathways",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pathways": {
+      "main": [
+        [
+          {
+            "node": "Video Editor Rating",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Graphic Designer Rating",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Manager Rating",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Graphic Designer Rating": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Update record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Video Editor Rating": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Manager Rating": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "2eff2835-d331-46e4-9755-0f1b35877208",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4f9f1e4ed91a541d2af9bd2530ee37bce3942e22f86f575e7d29cdb9bbf7bfd4"
+  },
+  "nodeGroups": [],
+  "id": "mA7n9jMeu8nc5rnJ",
+  "tags": [
+    {
+      "updatedAt": "2026-08-02T12:49:22.452Z",
+      "createdAt": "2026-08-02T12:49:22.452Z",
+      "id": "q3AP9R7vWPfVOxrD",
+      "name": "Agents"
+    }
+  ]
+}
